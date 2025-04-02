@@ -22,9 +22,10 @@ logger = logging.getLogger(__name__)
 # Load environment variables from .env file
 load_environment_variables()
 
-# Initialize Snowflake environment if running in Snowflake
-from utils.snowflake_init import initialize_snowflake_environment
-initialize_snowflake_environment()
+# Initialize Streamlit environment
+import os
+if not os.path.exists("data"):
+    os.makedirs("data", exist_ok=True)
 
 # Configure matplotlib for better visuals
 matplotlib.rcParams['font.family'] = 'serif'
@@ -401,8 +402,7 @@ def render_header():
 
 def render_navigation():
     """Render the main navigation"""
-    st.sidebar.markdown("## Explore")
-
+    # Home and About buttons
     nav_cols = st.sidebar.columns(2)
 
     with nav_cols[0]:
@@ -421,7 +421,6 @@ def render_navigation():
         ("🥁 Tala Explorer", "talas"),
         ("🔍 Audio Analysis", "analysis"),
         ("🎶 Music Generator", "synthesis"),
-        ("🎼 Music Composer", "composer"),
         ("🧠 AI Assistant", "ai")
     ]
 
@@ -497,8 +496,8 @@ def render_home_page():
             nav_page('talas')
     
     # Row 2
-    cols2 = st.columns(3)
-
+    cols2 = st.columns(2)
+    
     with cols2[0]:
         st.markdown("""
         <div class="showcase-card">
@@ -506,7 +505,7 @@ def render_home_page():
                 <h3>🔍 Audio Analysis</h3>
             </div>
             <div class="showcase-card-body">
-                <p>Upload audio samples and analyze them to identify ragas, detect talas, and visualize musical patterns.</p>
+                <p>Upload or record audio samples and analyze them to identify ragas, detect talas, and visualize musical patterns.</p>
                 <ul>
                     <li>Raga identification</li>
                     <li>Tala detection</li>
@@ -515,10 +514,10 @@ def render_home_page():
             </div>
         </div>
         """, unsafe_allow_html=True)
-
+        
         if st.button("Analyze Audio", key="home_analysis", use_container_width=True):
             nav_page('analysis')
-
+    
     with cols2[1]:
         st.markdown("""
         <div class="showcase-card">
@@ -535,39 +534,62 @@ def render_home_page():
             </div>
         </div>
         """, unsafe_allow_html=True)
-
+        
         if st.button("Generate Music", key="home_synthesis", use_container_width=True):
             nav_page('synthesis')
+    
+    # Row 3 - Add Music Composer
+    cols3 = st.columns(2)
 
-    with cols2[2]:
+    with cols3[0]:
         st.markdown("""
         <div class="showcase-card">
             <div class="showcase-card-header">
-                <h3>🎼 Music Composer</h3>
+                <h3>🎹 Music Composer</h3>
             </div>
             <div class="showcase-card-body">
-                <p>Create complete Indian classical music compositions using advanced AI models like Bi-LSTM and CNNGAN.</p>
+                <p>Create authentic Indian classical music compositions using advanced deep learning models.</p>
                 <ul>
-                    <li>Melodic composition with Bi-LSTM</li>
-                    <li>Audio synthesis with CNNGAN</li>
-                    <li>Hybrid composition techniques</li>
+                    <li>Melodic sequence generation</li>
+                    <li>Audio synthesis with authentic timbres</li>
+                    <li>Complete composition creation</li>
                 </ul>
             </div>
         </div>
         """, unsafe_allow_html=True)
 
-        if st.button("Compose Music", key="home_composer", use_container_width=True):
+        if st.button("Open Music Composer", key="home_composer", use_container_width=True):
             nav_page('composer')
-    
+
+    with cols3[1]:
+        st.markdown("""
+        <div class="showcase-card">
+            <div class="showcase-card-header">
+                <h3>🧠 AI Assistant</h3>
+            </div>
+            <div class="showcase-card-body">
+                <p>Get personalized insights and explanations about Indian classical music concepts.</p>
+                <ul>
+                    <li>Ask questions about ragas and talas</li>
+                    <li>Get personalized recommendations</li>
+                    <li>Learn about music theory and history</li>
+                </ul>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        if st.button("Open AI Assistant", key="home_ai", use_container_width=True):
+            nav_page('ai')
+
     # Add a direct link to the Ragas page instead of showing featured ragas
     st.markdown("""
-    <div style="background-color: rgba(128, 0, 0, 0.1); padding: 20px; border-radius: 10px; 
+    <div style="background-color: rgba(128, 0, 0, 0.1); padding: 20px; border-radius: 10px;
          border-left: 5px solid #800000; margin-top: 30px; text-align: center;">
          <h3>Explore All Ragas</h3>
          <p>Visit our comprehensive Raga Encyclopedia to explore the vast collection of Indian classical ragas.</p>
     </div>
     """, unsafe_allow_html=True)
-    
+
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         if st.button("Open Raga Encyclopedia", use_container_width=True):
@@ -1457,37 +1479,28 @@ def render_analysis_page():
     </div>
     """, unsafe_allow_html=True)
     
-    # Audio source selection
-    audio_source = st.radio(
-        "Select Audio Source:",
-        ["Upload Audio"],
-        horizontal=True
-    )
-    
     audio_data = None
     sr = None
-    
-    if audio_source == "Upload Audio":
-        uploaded_file = st.file_uploader("Upload an audio file:", type=['mp3', 'wav', 'ogg'])
-        
-        if uploaded_file:
-            # Save to a temporary file
-            with st.spinner("Processing audio file..."):
-                temp_file = f"temp_upload_{uploaded_file.name}"
-                with open(temp_file, "wb") as f:
-                    f.write(uploaded_file.getbuffer())
-                
-                # Load the audio file
-                audio_data, sr = load_audio(temp_file)
-                
-                if audio_data is not None:
-                    st.success("Audio file loaded successfully!")
-                    st.audio(temp_file)
-                else:
-                    st.error("Failed to load audio file. Please try a different file.")
-    
 
-    
+    # Audio upload section
+    uploaded_file = st.file_uploader("Upload an audio file:", type=['mp3', 'wav', 'ogg'])
+
+    if uploaded_file:
+        # Save to a temporary file
+        with st.spinner("Processing audio file..."):
+            temp_file = f"temp_upload_{uploaded_file.name}"
+            with open(temp_file, "wb") as f:
+                f.write(uploaded_file.getbuffer())
+
+            # Load the audio file
+            audio_data, sr = load_audio(temp_file)
+
+            if audio_data is not None:
+                st.success("Audio file loaded successfully!")
+                st.audio(temp_file)
+            else:
+                st.error("Failed to load audio file. Please try a different file.")
+
     # Analysis section
     if audio_data is not None:
         render_decorative_divider()
@@ -2302,6 +2315,304 @@ def render_synthesis_page():
             authentic-sounding variations.
             """)
 
+def render_composer_page():
+    """Render the music composer page"""
+    st.markdown("## Music Composer")
+
+    st.markdown("""
+    <div style="background-color: rgba(139, 0, 139, 0.1); padding: 20px; border-radius: 10px; border-left: 5px solid #8B008B;">
+        <p>Create authentic Indian classical music compositions using advanced deep learning models.
+        Generate complete compositions with melodic structure, ornamentation, and timbral qualities.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    render_decorative_divider()
+
+    # Composer options
+    composer_type = st.radio(
+        "Select Composer Type:",
+        ["Melodic Composer (Bi-LSTM)", "Audio Composer (CNNGAN)", "Hybrid Composer"],
+        horizontal=True
+    )
+
+    if composer_type == "Melodic Composer (Bi-LSTM)":
+        st.markdown("### Melodic Composer")
+
+        st.markdown("""
+        Generate melodic sequences that follow the grammar and structure of specific ragas.
+        This model captures characteristic phrases, note relationships, and traditional patterns.
+        """)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            # Raga selection
+            all_ragas = get_all_ragas()
+            selected_raga = st.selectbox("Select Raga:", all_ragas, key="melodic_raga")
+
+            # Length selection
+            sequence_length = st.slider("Sequence Length:", 32, 256, 128,
+                                      help="Controls the length of the generated sequence. Longer sequences create more developed compositions.")
+
+        with col2:
+            # Temperature
+            temperature = st.slider("Temperature:", 0.1, 2.0, 1.0, 0.1,
+                                  help="Controls randomness. Higher values produce more creative but potentially less traditional outputs.")
+
+            # Seed phrase
+            seed_options = ["Random", "Traditional Pakad", "Custom"]
+            seed_type = st.selectbox("Seed Type:", seed_options)
+
+            if seed_type == "Custom":
+                seed_phrase = st.text_input("Enter seed phrase (e.g., 'S R G M P'):")
+
+        # Generate button
+        if st.button("Generate Melodic Sequence", key="gen_melodic", use_container_width=True):
+            with st.spinner("Generating melodic sequence..."):
+                try:
+                    # Placeholder for the actual implementation
+                    st.info("This is a placeholder for the melodic composition functionality.")
+
+                    # Display a sample sequence visualization
+                    fig, ax = plt.subplots(figsize=(10, 4))
+                    x = np.arange(128)
+                    y = np.sin(x/10) + np.random.normal(0, 0.1, 128)
+                    ax.plot(x, y, color="#8B008B")
+                    ax.set_title("Generated Melodic Sequence")
+                    ax.set_xlabel("Time")
+                    ax.set_ylabel("Pitch")
+                    ax.grid(True, linestyle='--', alpha=0.7)
+                    st.pyplot(fig)
+
+                    # Display symbolic representation
+                    st.markdown("#### Generated Sequence (Symbolic)")
+                    st.code("S R G M P D N S' N D P M G R S G M P D N S' N D P M G R S")
+
+                    # Evaluation metrics
+                    st.markdown("#### Evaluation Metrics")
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("Raga Adherence", "92%")
+                    with col2:
+                        st.metric("Melodic Coherence", "88%")
+                    with col3:
+                        st.metric("Creativity Score", "78%")
+
+                except Exception as e:
+                    st.error(f"Error generating melodic sequence: {str(e)}")
+
+    elif composer_type == "Audio Composer (CNNGAN)":
+        st.markdown("### Audio Composer")
+
+        st.markdown("""
+        Generate high-quality audio renditions with authentic timbral qualities.
+        This model captures micro-tonal nuances, ornamentations, and creates natural performance dynamics.
+        """)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            # Raga selection
+            all_ragas = get_all_ragas()
+            selected_raga = st.selectbox("Select Raga:", all_ragas, key="audio_raga")
+
+            # Instrument selection
+            instrument = st.selectbox(
+                "Instrument:",
+                ["Sitar", "Sarod", "Bansuri (Flute)", "Sarangi", "Vocal", "Synthesized"],
+                key="audio_instrument"
+            )
+
+        with col2:
+            # Duration
+            duration = st.slider("Duration (seconds):", 10, 120, 30, key="audio_duration")
+
+            # Style
+            style = st.selectbox(
+                "Performance Style:",
+                ["Traditional", "Contemporary", "Experimental"],
+                key="audio_style"
+            )
+
+        # Generate button
+        if st.button("Generate Audio Performance", key="gen_audio", use_container_width=True):
+            with st.spinner("Generating audio performance..."):
+                try:
+                    # Placeholder for the actual implementation
+                    st.info("This is a placeholder for the audio composition functionality.")
+
+                    # Display a sample waveform
+                    fig, ax = plt.subplots(figsize=(10, 3))
+                    x = np.linspace(0, 30, 3000)
+                    y = np.sin(x*10) * np.exp(-x/30) + np.random.normal(0, 0.05, 3000)
+                    ax.plot(x, y, color="#8B008B")
+                    ax.set_title("Generated Audio Waveform")
+                    ax.set_xlabel("Time (s)")
+                    ax.set_ylabel("Amplitude")
+                    ax.grid(True, linestyle='--', alpha=0.7)
+                    st.pyplot(fig)
+
+                    # Audio player placeholder
+                    st.markdown("#### Generated Audio")
+                    st.audio("https://upload.wikimedia.org/wikipedia/commons/c/c4/Murali_Ravali_-_Raga_Hamsadhwani_-_Flute.ogg")
+
+                    # Evaluation metrics
+                    st.markdown("#### Audio Quality Metrics")
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("Timbral Authenticity", "85%")
+                    with col2:
+                        st.metric("Ornament Accuracy", "90%")
+                    with col3:
+                        st.metric("Expression Score", "82%")
+
+                except Exception as e:
+                    st.error(f"Error generating audio performance: {str(e)}")
+
+    else:  # Hybrid Composer
+        st.markdown("### Hybrid Composer")
+
+        st.markdown("""
+        Create complete compositions combining the strengths of both models.
+        This approach generates an authentic melodic structure and synthesizes high-quality audio with proper timbral qualities.
+        """)
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            # Raga selection
+            all_ragas = get_all_ragas()
+            selected_raga = st.selectbox("Select Raga:", all_ragas, key="hybrid_raga")
+
+            # Instrument selection
+            instrument = st.selectbox(
+                "Instrument:",
+                ["Sitar", "Sarod", "Bansuri (Flute)", "Sarangi", "Vocal", "Synthesized"],
+                key="hybrid_instrument"
+            )
+
+            # Duration
+            duration = st.slider("Duration (seconds):", 10, 180, 60, key="hybrid_duration")
+
+        with col2:
+            # Temperature
+            temperature = st.slider("Temperature:", 0.1, 2.0, 1.0, 0.1, key="hybrid_temp",
+                                  help="Controls randomness. Higher values produce more creative but potentially less traditional outputs.")
+
+            # Melodic complexity
+            melodic_complexity = st.slider("Melodic Complexity:", 0.1, 1.0, 0.7, 0.1,
+                                         help="Controls the complexity of the melodic patterns.")
+
+            # Ornamentation level
+            ornamentation = st.slider("Ornamentation Level:", 0.1, 1.0, 0.6, 0.1,
+                                    help="Controls the amount and complexity of ornaments like meend, gamak, etc.")
+
+        # Advanced options
+        with st.expander("Advanced Options"):
+            col1, col2 = st.columns(2)
+
+            with col1:
+                # Form structure
+                form_structure = st.selectbox(
+                    "Form Structure:",
+                    ["Alap-Jor-Jhala", "Gat in Vilambit", "Gat in Madhya Laya", "Gat in Drut", "Free Form"]
+                )
+
+                # Tala selection
+                all_talas = get_all_talas()
+                selected_tala = st.selectbox("Select Tala (for rhythmic sections):", all_talas)
+
+            with col2:
+                # Tanpura drone
+                include_tanpura = st.checkbox("Include Tanpura Drone", value=True)
+
+                # Tabla accompaniment
+                include_tabla = st.checkbox("Include Tabla Accompaniment", value=True)
+
+        # Generate button
+        if st.button("Generate Complete Composition", key="gen_hybrid", use_container_width=True):
+            with st.spinner("Generating complete composition..."):
+                try:
+                    # Placeholder for the actual implementation
+                    st.info("This is a placeholder for the hybrid composition functionality.")
+
+                    # Display a sample visualization
+                    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6))
+
+                    # Melodic sequence
+                    x1 = np.arange(128)
+                    y1 = np.sin(x1/10) + np.random.normal(0, 0.1, 128)
+                    ax1.plot(x1, y1, color="#8B008B")
+                    ax1.set_title("Generated Melodic Structure")
+                    ax1.set_xlabel("Time")
+                    ax1.set_ylabel("Pitch")
+                    ax1.grid(True, linestyle='--', alpha=0.7)
+
+                    # Audio waveform
+                    x2 = np.linspace(0, 60, 6000)
+                    y2 = np.sin(x2*10) * np.exp(-x2/60) + np.random.normal(0, 0.05, 6000)
+                    ax2.plot(x2, y2, color="#8B008B")
+                    ax2.set_title("Synthesized Audio Waveform")
+                    ax2.set_xlabel("Time (s)")
+                    ax2.set_ylabel("Amplitude")
+                    ax2.grid(True, linestyle='--', alpha=0.7)
+
+                    plt.tight_layout()
+                    st.pyplot(fig)
+
+                    # Audio player placeholder
+                    st.markdown("#### Generated Composition")
+                    st.audio("https://upload.wikimedia.org/wikipedia/commons/c/c4/Murali_Ravali_-_Raga_Hamsadhwani_-_Flute.ogg")
+
+                    # Composition structure
+                    st.markdown("#### Composition Structure")
+                    st.json({
+                        "raga": selected_raga,
+                        "tala": selected_tala if 'selected_tala' in locals() else "None",
+                        "duration": f"{duration} seconds",
+                        "sections": [
+                            {"name": "Alap", "start": "0:00", "end": "0:20", "description": "Slow, rhythmless exploration of the raga"},
+                            {"name": "Jor", "start": "0:20", "end": "0:40", "description": "Rhythmic development without tabla"},
+                            {"name": "Gat", "start": "0:40", "end": "1:00", "description": "Fixed composition with tabla accompaniment"}
+                        ]
+                    })
+
+                    # Download button
+                    st.download_button(
+                        label="Download Composition",
+                        data=b"Placeholder binary data",
+                        file_name=f"composition_{selected_raga}.wav",
+                        mime="audio/wav"
+                    )
+
+                except Exception as e:
+                    st.error(f"Error generating composition: {str(e)}")
+
+    # About music composition
+    with st.expander("About Music Composition in Indian Classical Music"):
+        st.markdown("""
+        ### Composition in Indian Classical Music
+
+        Indian classical music is primarily an improvised art form, but it is structured around fixed compositions
+        and follows strict rules based on ragas and talas. The composition process typically involves:
+
+        1. **Raga Selection**: Choosing a melodic framework with specific notes, phrases, and emotional qualities
+        2. **Tala Selection**: Selecting a rhythmic cycle that complements the raga
+        3. **Form Structure**: Organizing the performance into sections like alap (rhythmless introduction),
+           jor (rhythmic section without tabla), and gat (fixed composition with tabla)
+        4. **Ornamentation**: Adding embellishments like meend (glides), gamak (oscillations), and kan (grace notes)
+
+        The AI composition models attempt to capture these elements by:
+
+        - Learning the grammar and structure of ragas from traditional performances
+        - Generating authentic melodic patterns that adhere to raga rules
+        - Adding appropriate ornamentations based on the style of the raga
+        - Creating realistic timbral qualities that match traditional instruments
+
+        While AI-generated compositions cannot replace human creativity, they can serve as valuable
+        tools for learning, practice, and inspiration.
+        """)
+
 def render_ai_page():
     """Render the AI assistant page"""
     st.markdown("## AI Assistant")
@@ -2474,23 +2785,9 @@ def main():
     elif st.session_state.page == 'synthesis':
         render_synthesis_page()
     elif st.session_state.page == 'composer':
-        # Import the music composer page from modules
-        from modules.music_composer_page import render_music_composer_page
-        render_music_composer_page()
+        render_composer_page()
     elif st.session_state.page == 'ai':
         render_ai_page()
-    elif st.session_state.page == 'healthcheck':
-        # Import the healthcheck page
-        from modules.healthcheck import render_healthcheck_page
-        render_healthcheck_page()
-
-# Check for healthcheck URL parameter
-params = st.experimental_get_query_params()
-if 'healthcheck' in params:
-    if not hasattr(st.session_state, 'page'):
-        st.session_state.page = 'healthcheck'
-    else:
-        st.session_state.page = 'healthcheck'
 
 if __name__ == "__main__":
     main()

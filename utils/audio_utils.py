@@ -51,26 +51,28 @@ def load_audio(file_path, sr=None):
 def save_audio(audio_data, file_path, sr=44100, format='wav'):
     """
     Save audio to file
-    
+
     Parameters:
         audio_data (np.ndarray): Audio time series
         file_path (str): Path to save the audio file
         sr (int): Sample rate
         format (str): Audio format ('wav', 'mp3', etc.)
-    
+
     Returns:
         bool: True if successful, False otherwise
     """
     try:
         # Make sure the directory exists
         os.makedirs(os.path.dirname(os.path.abspath(file_path)), exist_ok=True)
-        
+
         # Save the file
         sf.write(file_path, audio_data, sr, format=format)
         return True
     except Exception as e:
         print(f"Error saving audio file: {e}")
         return False
+
+
 
 
 def trim_silence(y, sr, threshold_db=-50, frame_length=2048, hop_length=512):
