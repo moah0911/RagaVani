@@ -22,6 +22,10 @@ logger = logging.getLogger(__name__)
 # Load environment variables from .env file
 load_environment_variables()
 
+# Initialize Snowflake environment if running in Snowflake
+from utils.snowflake_init import initialize_snowflake_environment
+initialize_snowflake_environment()
+
 # Configure matplotlib for better visuals
 matplotlib.rcParams['font.family'] = 'serif'
 matplotlib.rcParams['font.serif'] = ['Palatino Linotype', 'Book Antiqua', 'Palatino', 'DejaVu Serif']
@@ -2475,6 +2479,18 @@ def main():
         render_music_composer_page()
     elif st.session_state.page == 'ai':
         render_ai_page()
+    elif st.session_state.page == 'healthcheck':
+        # Import the healthcheck page
+        from modules.healthcheck import render_healthcheck_page
+        render_healthcheck_page()
+
+# Check for healthcheck URL parameter
+params = st.experimental_get_query_params()
+if 'healthcheck' in params:
+    if not hasattr(st.session_state, 'page'):
+        st.session_state.page = 'healthcheck'
+    else:
+        st.session_state.page = 'healthcheck'
 
 if __name__ == "__main__":
     main()

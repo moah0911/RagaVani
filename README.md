@@ -235,28 +235,55 @@ audio, sr, sequence = hybrid.generate_composition(
 
 ## Deployment
 
-RagaVani is configured for deployment on Render.com with persistent data storage:
+RagaVani can be deployed on various platforms:
 
-### Deployment Steps
+### Render.com Deployment
+
+RagaVani is configured for deployment on Render.com with persistent data storage:
 
 1. Fork or clone this repository
 2. Connect your GitHub account to Render
 3. Create a new Web Service pointing to your repository
 4. Render will automatically use the configuration settings
 
-### Environment Variables
+#### Environment Variables for Render
 
 - `PYTHON_VERSION`: 3.9.0
 - `DEFAULT_USER_EMAIL`: (optional) Custom admin email
 - `DEFAULT_USER_PASSWORD`: (optional) Custom admin password
 
-### User Data Persistence
+#### User Data Persistence on Render
 
 The application uses Render's persistent disk feature to store user data:
 
 - User registrations are stored in `/data/user_database.json`
 - This file persists between application restarts
 - User data will be preserved even when the application is redeployed
+
+### Snowflake Deployment
+
+RagaVani can also be deployed on Snowflake using Snowpark Container Services:
+
+1. Set up the Snowflake environment using the provided SQL script
+2. Build and push the Docker image to Snowflake's registry
+3. Deploy the service using Snowpark Container Services
+4. Access the application through the provided service URL
+
+For detailed instructions, see the [Snowflake Deployment Guide](SNOWFLAKE_DEPLOYMENT_GUIDE.md).
+
+#### Requirements for Snowflake Deployment
+
+- Snowflake account with access to Snowpark Container Services
+- Snowflake account with ACCOUNTADMIN role or equivalent privileges
+- Docker installed on your local machine
+- Snowflake CLI installed on your local machine
+
+#### Data Persistence on Snowflake
+
+The application is configured to store data in a mounted volume:
+
+- User data is stored in a persistent volume mounted at `/data`
+- Data persists between service restarts and updates
 
 ## Recent Improvements
 
