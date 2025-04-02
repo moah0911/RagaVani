@@ -1,0 +1,36 @@
+# Core dependencies
+streamlit==1.28.0
+numpy==1.24.3
+pandas==1.5.3
+matplotlib==3.7.1
+
+# Audio processing
+librosa==0.10.0
+scipy==1.10.1
+soundfile==0.12.1
+pydub==0.25.1
+
+# Data processing and visualization
+scikit-learn==1.2.2
+plotly==5.14.1
+seaborn==0.12.2
+
+# Neural processing (optimized for deployment)
+tensorflow-cpu==2.12.0  # Using CPU version for better compatibility
+keras==2.12.0
+
+# Audio synthesis
+sounddevice==0.4.6
+midi2audio==0.1.1
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+joblib==1.2.0
+tqdm==4.65.0
+pillow==9.5.0
+jsonschema==4.17.3
+
+# AI Services (optional)
+google-generativeai==0.3.1
+openai==0.27.8

@@ -1,0 +1,165 @@
+[
+  {
+    "timestamp": "2025-03-31 05:45:16",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 7254.465818405151,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": "Bhairav",
+      "tala": null
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:45:47",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 6373.767375946045,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": "Bhimpalasi",
+      "tala": null
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:46:09",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 6672.641754150391,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": "Bhimpalasi",
+      "tala": null
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:46:12",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 6368.15071105957,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": "Bhimpalasi",
+      "tala": null
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:53:38",
+    "service": "Google Gemini",
+    "endpoint": "generate_tala_explanation",
+    "status_code": 200,
+    "response_time_ms": 6627.940893173218,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": null,
+      "tala": "Adi Tala"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:55:08",
+    "service": "Google Gemini",
+    "endpoint": "generate_tala_explanation",
+    "status_code": 200,
+    "response_time_ms": 6076.6355991363525,
+    "details": {
+      "model": "models/gemini-1.5-flash",
+      "raga": null,
+      "tala": "Adi Tala"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:01:52",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 7440.789222717285,
+    "details": {
+      "model": "gemini-1.5-flash",
+      "raga": "Bhairav",
+      "tala": null,
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:09:45",
+    "service": "Google Gemini",
+    "endpoint": "generate_composition_generation",
+    "status_code": 200,
+    "response_time_ms": 18536.19694709778,
+    "details": {
+      "model": "gemini-1.5-pro",
+      "raga": "Bhairav",
+      "tala": "Adi Tala",
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:10:09",
+    "service": "Google Gemini",
+    "endpoint": "generate_neural_synthesis",
+    "status_code": 200,
+    "response_time_ms": 24151.485681533813,
+    "details": {
+      "model": "gemini-1.5-pro",
+      "raga": "Bhairav",
+      "tala": "Adi Tala",
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:10:28",
+    "service": "Google Gemini",
+    "endpoint": "generate_tala_explanation",
+    "status_code": 200,
+    "response_time_ms": 6221.494913101196,
+    "details": {
+      "model": "gemini-1.5-flash",
+      "raga": null,
+      "tala": "Adi Tala",
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:27:06",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 6775.887966156006,
+    "details": {
+      "model": "gemini-1.5-flash",
+      "raga": "Yaman",
+      "tala": null,
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:27:43",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 5919.980764389038,
+    "details": {
+      "model": "gemini-1.5-flash",
+      "raga": "Yaman",
+      "tala": null,
+      "temperature": 0.7
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:27:57",
+    "service": "Google Gemini",
+    "endpoint": "generate_raga_explanation",
+    "status_code": 200,
+    "response_time_ms": 6448.176383972168,
+    "details": {
+      "model": "gemini-1.5-flash",
+      "raga": "Yaman",
+      "tala": null,
+      "temperature": 0.7
+    }
+  }
+]

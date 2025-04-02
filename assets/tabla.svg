@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <!-- Dayan (Right Drum) -->
+  <g transform="translate(260, 100)">
+    <!-- Drum body -->
+    <path d="M0,0 C30,-40 60,-45 80,-30 C100,-15 100,15 80,30 C60,45 30,40 0,40 C-30,40 -60,45 -80,30 C-100,15 -100,-15 -80,-30 C-60,-45 -30,-40 0,0" 
+          fill="#8b4513" stroke="#3a2410" stroke-width="2"/>
+    
+    <!-- Drum head -->
+    <ellipse cx="0" cy="0" rx="60" ry="30" fill="#f5f2e9" stroke="#cd7f32" stroke-width="2"/>
+    
+    <!-- Central black spot (syahi) -->
+    <ellipse cx="-5" cy="0" rx="20" ry="10" fill="#1a1a1a"/>
+    
+    <!-- String wrappings -->
+    <path d="M-58,3 C-58,8 -58,12 -58,17 M-54,5 C-54,10 -54,14 -54,19 M-50,7 C-50,12 -50,16 -50,21" 
+          stroke="#cd7f32" stroke-width="1.5" fill="none"/>
+    <path d="M58,3 C58,8 58,12 58,17 M54,5 C54,10 54,14 54,19 M50,7 C50,12 50,16 50,21" 
+          stroke="#cd7f32" stroke-width="1.5" fill="none"/>
+    
+    <!-- Wooden base -->
+    <ellipse cx="0" cy="42" rx="65" ry="10" fill="#8b4513" stroke="#3a2410" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Bayan (Left Drum) -->
+  <g transform="translate(110, 100)">
+    <!-- Drum body (copper) -->
+    <path d="M0,0 C50,-55 90,-55 110,-35 C130,-15 130,25 110,45 C90,65 50,65 0,60 C-50,65 -90,65 -110,45 C-130,25 -130,-15 -110,-35 C-90,-55 -50,-55 0,0" 
+          fill="#cd7f32" stroke="#8b4513" stroke-width="2"/>
+    
+    <!-- Drum head -->
+    <ellipse cx="0" cy="0" rx="70" ry="40" fill="#f5f2e9" stroke="#8b4513" stroke-width="2"/>
+    
+    <!-- Central black spot (syahi) -->
+    <ellipse cx="10" cy="0" rx="25" ry="15" fill="#1a1a1a"/>
+    
+    <!-- String wrappings -->
+    <path d="M-68,3 C-68,8 -68,12 -68,17 M-64,5 C-64,10 -64,14 -64,19 M-60,7 C-60,12 -60,16 -60,21" 
+          stroke="#8b4513" stroke-width="1.5" fill="none"/>
+    <path d="M68,3 C68,8 68,12 68,17 M64,5 C64,10 64,14 64,19 M60,7 C60,12 60,16 60,21" 
+          stroke="#8b4513" stroke-width="1.5" fill="none"/>
+    
+    <!-- Base rim -->
+    <ellipse cx="0" cy="62" rx="85" ry="15" fill="#8b4513" stroke="#3a2410" stroke-width="1.5"/>
+  </g>
+</svg>

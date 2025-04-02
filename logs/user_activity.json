@@ -1,0 +1,106 @@
+[
+  {
+    "timestamp": "2025-03-31 05:45:09",
+    "action": "Requested raga explanation",
+    "details": {
+      "raga": "Bhairav",
+      "thaat": "Bhairav",
+      "time_of_day": "Early Morning",
+      "timestamp": "2025-03-31 05:45:09"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:45:41",
+    "action": "Requested raga explanation",
+    "details": {
+      "raga": "Bhimpalasi",
+      "thaat": "Kafi",
+      "time_of_day": "Afternoon",
+      "timestamp": "2025-03-31 05:45:41"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:46:02",
+    "action": "Requested raga explanation",
+    "details": {
+      "raga": "Bhimpalasi",
+      "thaat": "Kafi",
+      "time_of_day": "Afternoon",
+      "timestamp": "2025-03-31 05:46:02"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:46:05",
+    "action": "Requested raga explanation",
+    "details": {
+      "raga": "Bhimpalasi",
+      "thaat": "Kafi",
+      "time_of_day": "Afternoon",
+      "timestamp": "2025-03-31 05:46:05"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:49:01",
+    "action": "Generated tanpura",
+    "details": {
+      "root_note": "D",
+      "duration": 60,
+      "tempo": 60,
+      "jiva": 0.5,
+      "timestamp": "2025-03-31 05:49:01"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:49:58",
+    "action": "Generated tabla rhythm",
+    "details": {
+      "tala": "Adi Tala",
+      "tempo": 100,
+      "duration": 30,
+      "variation": "Basic",
+      "timestamp": "2025-03-31 05:49:57"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:01:45",
+    "action": "Requested raga explanation",
+    "details": {
+      "raga": "Bhairav",
+      "thaat": "Bhairav",
+      "time_of_day": "Early Morning",
+      "timestamp": "2025-03-31 06:01:45"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:08:18",
+    "action": "Generated tanpura",
+    "details": {
+      "root_note": "G",
+      "duration": 60,
+      "tempo": 60,
+      "jiva": 0.5,
+      "timestamp": "2025-03-31 06:08:18"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:09:07",
+    "action": "Generated tabla rhythm",
+    "details": {
+      "tala": "Adi Tala",
+      "tempo": 100,
+      "duration": 30,
+      "variation": "Basic",
+      "timestamp": "2025-03-31 06:09:07"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:10:09",
+    "action": "Generated composition ideas",
+    "details": {
+      "raga": "Bhairav",
+      "tala": "Adi Tala",
+      "composition_type": "Gat (Instrumental)",
+      "timestamp": "2025-03-31 06:10:09"
+    }
+  }
+]

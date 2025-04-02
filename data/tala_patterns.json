@@ -1,0 +1,149 @@
+{
+  "talas": {
+    "Teentaal": {
+      "beats": 16,
+      "vibhags": [4, 4, 4, 4],
+      "clap_pattern": "X 2 0 3",
+      "bols": "Dha Dhin Dhin Dha | Dha Dhin Dhin Dha | Dha Tin Tin Ta | Ta Dhin Dhin Dha",
+      "description": "The most common tala in Hindustani classical music, with 16 beats divided into four equal sections.",
+      "variations": [
+        "Dha Dhin Dhin Dha | Dha Dhin Dhin Dha | Dha Tin Tin Na | Na Dhin Dhin Dha",
+        "Dha Dhin Dhin Dha | Dha Dhin Dhin Dha | Dha Tin Tin Ta | Tete Dhin Dhin Dha",
+        "Dha Dhin Dhin Dha | Dha Dhin Dhin Dha | Dha Tirkit Tin Ta | Ta Dhin Dhin Dha"
+      ]
+    },
+    "Ektaal": {
+      "beats": 12,
+      "vibhags": [2, 2, 2, 2, 2, 2],
+      "clap_pattern": "X 0 2 0 3 0",
+      "bols": "Dhin Dhin | Dha Dha | Tu Na | Ka Ta | Dhin Dhin | Dha Dha",
+      "description": "A 12-beat tala divided into six sections of two beats each, commonly used in slower compositions.",
+      "variations": [
+        "Dhin Dhin | Dha Dha | Tu Na | Ka Ta | Tin Tin | Ta Ta",
+        "Dhin Dhin | Dha Dha | Dhi Na | Dhi Na | Dhin Dhin | Dha Dha",
+        "Dhin Dhin | Dha Dha | Tu Na | Ka Ta | Dhi Dhi | Na Na"
+      ]
+    },
+    "Jhaptaal": {
+      "beats": 10,
+      "vibhags": [2, 3, 2, 3],
+      "clap_pattern": "X 2 0 3",
+      "bols": "Dhin Na | Dhin Dhin Na | Tin Na | Dhin Dhin Na",
+      "description": "A 10-beat tala with an asymmetrical structure, divided into sections of 2, 3, 2, and 3 beats.",
+      "variations": [
+        "Dhin Na | Dhin Dhin Na | Tin Na | Tin Tin Na",
+        "Dhin Na | Dhin Dhin Na | Tin Na | Dha Dhin Na",
+        "Dhin Na | Dha Dhin Na | Tin Na | Dha Dhin Na"
+      ]
+    },
+    "Keherwa": {
+      "beats": 8,
+      "vibhags": [4, 4],
+      "clap_pattern": "X 0",
+      "bols": "Dha Ge Na Ti | Na Ka Dhi Na",
+      "description": "An 8-beat tala commonly used in light classical and folk music, divided into two equal sections.",
+      "variations": [
+        "Dha Dhin Na Ti | Na Dhin Dhin Na",
+        "Dha Ge Na Ti | Ta Ke Dhi Na",
+        "Dha Tirkit Dhin Na | Ta Tirkit Dhin Na"
+      ]
+    },
+    "Rupak": {
+      "beats": 7,
+      "vibhags": [3, 2, 2],
+      "clap_pattern": "0 X 0",
+      "bols": "Tin Tin Na | Dhin Na | Dhin Na",
+      "description": "A 7-beat tala with an unusual clap pattern that begins with a wave (empty beat) rather than a clap.",
+      "variations": [
+        "Tin Tin Na | Tin Na | Dhin Na",
+        "Tin Tin Na | Dhin Na | Tin Na",
+        "Ti Ri Na | Dhi Na | Dhi Na"
+      ]
+    },
+    "Dadra": {
+      "beats": 6,
+      "vibhags": [3, 3],
+      "clap_pattern": "X 0",
+      "bols": "Dha Dhin Na | Ta Tin Na",
+      "description": "A 6-beat tala commonly used in semi-classical forms like thumri and dadra, divided into two equal sections.",
+      "variations": [
+        "Dha Dhin Na | Ta Tin Na",
+        "Dha Ti Na | Ta Tin Na",
+        "Dha Dhin Na | Dha Dhin Na"
+      ]
+    },
+    "Deepchandi": {
+      "beats": 14,
+      "vibhags": [3, 4, 3, 4],
+      "clap_pattern": "X 2 0 3",
+      "bols": "Dha Dhin | Na Dha Tin Na | Ta Dhin | Na Dha Dhin Na",
+      "description": "A 14-beat tala commonly used in semi-classical forms like thumri, with an asymmetrical structure.",
+      "variations": [
+        "Dha Dhin | Na Dha Tin Na | Ta Dhin | Na Dha Dhin Na",
+        "Dha Dhin | Na Dha Tin Na | Dha Dhin | Na Dha Dhin Na",
+        "Dha Dhin | Na Dha Tin Na | Ta Dhin | Dha Dha Dhin Na"
+      ]
+    },
+    "Chautaal": {
+      "beats": 12,
+      "vibhags": [2, 2, 2, 2, 2, 2],
+      "clap_pattern": "X 0 2 0 3 4",
+      "bols": "Dha Dha | Dhin Ta | Dha Dha | Dhin Ta | Ta Ta | Dhin Dha",
+      "description": "A 12-beat tala with a distinctive clap pattern, commonly used in dhrupad and dhamar compositions.",
+      "variations": [
+        "Dha Dha | Dhin Ta | Dha Dha | Dhin Ta | Ta Ta | Dhin Dha",
+        "Dha Dha | Dhin Ta | Dha Dha | Dhin Ta | Tin Tin | Dha Dha",
+        "Dha Dha | Dhin Ta | Dha Dha | Dhin Ta | Ta Ta | Tin Dha"
+      ]
+    },
+    "Dhamar": {
+      "beats": 14,
+      "vibhags": [5, 2, 3, 4],
+      "clap_pattern": "X 2 0 3",
+      "bols": "Ka Dhi Ta Dhi Ta | Ta Ka | Dhi Ta Dhi | Ta Ka Dhi Ta",
+      "description": "A 14-beat tala specifically used for the dhamar genre, with an asymmetrical structure.",
+      "variations": [
+        "Ka Dhi Ta Dhi Ta | Ta Ka | Dhi Ta Dhi | Ta Ka Dhi Ta",
+        "Ka Dhi Ta Dhi Ta | Dha Ka | Dhi Ta Dhi | Ta Ka Dhi Ta",
+        "Ka Dhi Ta Dhi Ta | Ta Ka | Dhi Ta Dhi | Dha Ka Dhi Ta"
+      ]
+    },
+    "Tilwada": {
+      "beats": 16,
+      "vibhags": [4, 4, 4, 4],
+      "clap_pattern": "X 0 2 0",
+      "bols": "Dha Dhin Dhin Dha | Dha Dha Tin Ta | Ta Tin Dhin Dha | Dha Dha Dhin Dha",
+      "description": "A 16-beat tala similar to Teentaal but with a different distribution of bols, used in instrumental music.",
+      "variations": [
+        "Dha Dhin Dhin Dha | Dha Dha Tin Ta | Ta Tin Dhin Dha | Dha Dha Dhin Dha",
+        "Dha Dhin Dhin Dha | Dha Dha Tin Ta | Ta Tin Dhin Dha | Dha Tirkit Dhin Dha",
+        "Dha Dhin Dhin Dha | Dha Dha Tin Ta | Dha Tin Dhin Dha | Dha Dha Dhin Dha"
+      ]
+    }
+  },
+  "tala_families": {
+    "Chautal Family": ["Chautaal", "Dhamar", "Brahma"],
+    "Teental Family": ["Teentaal", "Tilwada", "Sitarkhani"],
+    "Jhaptal Family": ["Jhaptaal", "Sultal"],
+    "Ektal Family": ["Ektaal", "Chautaal", "Lakshmi"],
+    "Light Talas": ["Keherwa", "Dadra", "Rupak"]
+  },
+  "tempo_ranges": {
+    "Vilambit": {
+      "description": "Slow tempo",
+      "bpm_range": [10, 60]
+    },
+    "Madhya": {
+      "description": "Medium tempo",
+      "bpm_range": [60, 120]
+    },
+    "Drut": {
+      "description": "Fast tempo",
+      "bpm_range": [120, 200]
+    },
+    "Ati-Drut": {
+      "description": "Very fast tempo",
+      "bpm_range": [200, 500]
+    }
+  }
+}

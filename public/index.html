@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RagaVani - Login</title>
+    <!-- No external authentication SDKs needed -->
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>RagaVani</h1>
+            <p>Indian Classical Music Analysis Tool</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" id="login-tab">Login</div>
+            <div class="tab" id="register-tab">Register</div>
+        </div>
+
+        <div class="form-container active" id="login-form">
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password">
+            </div>
+            <button id="login-button">Login</button>
+            <div class="error-message" id="login-error"></div>
+            <div class="success-message" id="login-success">Login successful! Redirecting...</div>
+        </div>
+
+        <div class="form-container" id="register-form">
+            <div class="form-group">
+                <label for="register-name">Display Name</label>
+                <input type="text" id="register-name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" placeholder="Enter your password (min. 6 characters)">
+            </div>
+            <div class="form-group">
+                <label for="register-confirm-password">Confirm Password</label>
+                <input type="password" id="register-confirm-password" placeholder="Confirm your password">
+            </div>
+            <button id="register-button">Register</button>
+            <div class="error-message" id="register-error"></div>
+            <div class="success-message" id="register-success">Registration successful! Redirecting...</div>
+        </div>
+
+        <div class="divider">or</div>
+
+        <button id="guest-button">Continue as Guest</button>
+
+        <div class="footer">
+            <p>RagaVani uses secure authentication. Your data is protected.</p>
+            <p>© 2025 RagaVani | <a href="https://ragavani.onrender.com/privacy" target="_blank">Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

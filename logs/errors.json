@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": "2025-03-31 05:46:27",
+    "component": "audio_analysis",
+    "error": "cannot access local variable 'np' where it is not associated with a value",
+    "error_type": "UnboundLocalError",
+    "context": {
+      "sample": "Raga Yaman Alaap by Pandit Jasraj"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:46:31",
+    "component": "audio_analysis",
+    "error": "cannot access local variable 'np' where it is not associated with a value",
+    "error_type": "UnboundLocalError",
+    "context": {
+      "sample": "Raga Bhairav Bandish by Kishori Amonkar"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 05:47:18",
+    "component": "audio_analysis",
+    "error": "cannot access local variable 'os' where it is not associated with a value",
+    "error_type": "UnboundLocalError",
+    "context": {
+      "file": "classical-instrumental-emotional-music-300927.mp3"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:05:26",
+    "component": "audio_analysis",
+    "error": "No librosa.feature attribute spectral_flux",
+    "error_type": "AttributeError",
+    "context": {
+      "analysis": "tala_detection"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:06:36",
+    "component": "audio_analysis",
+    "error": "No librosa.feature attribute spectral_flux",
+    "error_type": "AttributeError",
+    "context": {
+      "analysis": "tala_detection"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:07:06",
+    "component": "audio_analysis",
+    "error": "No librosa.feature attribute spectral_flux",
+    "error_type": "AttributeError",
+    "context": {
+      "analysis": "ai_performance"
+    }
+  },
+  {
+    "timestamp": "2025-03-31 06:08:01",
+    "component": "audio_analysis",
+    "error": "No librosa.feature attribute spectral_flux",
+    "error_type": "AttributeError",
+    "context": {
+      "analysis": "tala_detection"
+    }
+  }
+]

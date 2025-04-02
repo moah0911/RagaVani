@@ -1,0 +1,15 @@
+{
+  "latent_dim": 100,
+  "sample_rate": 22050,
+  "duration": 5.0,
+  "supported_ragas": [
+    "Yaman", 
+    "Bhairav", 
+    "Bhimpalasi", 
+    "Darbari", 
+    "Khamaj", 
+    "Malkauns",
+    "Bageshri",
+    "Todi"
+  ]
+}

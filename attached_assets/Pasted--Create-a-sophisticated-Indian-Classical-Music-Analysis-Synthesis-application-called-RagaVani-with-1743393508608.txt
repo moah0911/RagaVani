@@ -1,0 +1,73 @@
+"Create a sophisticated Indian Classical Music Analysis & Synthesis application called RagaVani with the following comprehensive architecture:
+
+Technical Stack:
+
+Python with Streamlit for UI/backend
+Firebase for authentication & database
+Google Gemini AI integration for advanced analysis
+librosa for audio processing
+scipy for signal processing
+numpy for numerical computations
+matplotlib for visualizations
+Core Modules:
+
+Audio Analysis Engine:
+Real-time pitch detection with advanced DSP algorithms
+Gamaka recognition & ornament analysis
+Raga pattern matching & identification
+Tala cycle detection & analysis
+Performance quality assessment
+Neural Processing:
+Advanced raga classification models
+Gamaka pattern recognition
+Performance critique generation
+Musical phrase analysis
+Educational content generation
+Music Synthesis:
+Multi-instrument synthesis (sitar, sarod, bansuri, etc.)
+Realistic tanpura drone generation
+Tabla accompaniment synthesis
+Gamaka & ornament synthesis
+Intelligent phrase generation
+Database Architecture:
+User authentication & management
+Composition storage system
+Performance history tracking
+Analysis results caching
+User preferences management
+UI Components:
+
+Analysis Interface:
+Real-time waveform visualization
+Pitch contour display
+Note distribution analysis
+Performance metrics dashboard
+Audio recording/upload capability
+Synthesis Interface:
+Multi-track composition editor
+Virtual instrument controls
+Gamaka & ornament editor
+Phrase library access
+Real-time audio synthesis
+Educational Section:
+Interactive raga explorer
+Tala learning tools
+AI-powered tutorials
+Progress tracking
+Practice recommendations
+Required Files Structure:
+/app.py - Main application
+/modules/ - Core processing modules
+/services/ - External services integration
+/assets/ - UI assets and samples
+/data/ - Musical data and examples
+/utils/ - Helper utilities
+
+The application should implement:
+
+Comprehensive error handling
+Performance optimization
+Session management
+Secure data handling
+Responsive UI design
+Please create this as a production-ready application optimized for deployment on Replit with Streamlit

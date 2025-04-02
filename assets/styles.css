@@ -1,0 +1,345 @@
+/* 
+RagaVani Custom Styles
+A rich and vibrant styling system inspired by Indian classical traditions
+*/
+
+/* General Typography */
+body {
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+    color: #4B3621; /* Deep Brown */
+    background-color: #FFF8DC; /* Soft Cream */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+    color: #800000; /* Deep Maroon */
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid #DAA520; /* Golden Yellow */
+    padding-bottom: 0.3em;
+    margin-bottom: 0.7em;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #DAA520;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.6em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #483D8B; /* Deep Purple */
+}
+
+a {
+    color: #008B8B; /* Turquoise */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF8C00; /* Saffron */
+    text-decoration: underline;
+}
+
+/* Custom Components */
+
+/* Decorative Divider */
+.decorative-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    height: 40px;
+    position: relative;
+}
+
+.decorative-divider:before, .decorative-divider:after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #DAA520, transparent);
+    margin: 0 15px;
+}
+
+.decorative-divider .symbol {
+    font-size: 24px;
+    color: #800000;
+    background-color: #FFF8DC;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* Cards & Containers */
+.showcase-card {
+    border: 1px solid #DAA520;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: rgba(255, 248, 220, 0.7);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-card-header {
+    background-color: rgba(128, 0, 0, 0.1);
+    padding: 15px;
+    border-bottom: 1px solid #DAA520;
+}
+
+.showcase-card-header h3 {
+    margin: 0;
+    color: #800000;
+}
+
+.showcase-card-body {
+    padding: 15px;
+}
+
+.showcase-card-body ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.showcase-card-body li {
+    margin-bottom: 5px;
+}
+
+/* Raga Card */
+.raga-card {
+    border: 2px solid #800000; /* Default maroon - will be overridden by inline style */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 248, 220, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.raga-card:hover {
+    transform: translateY(-3px);
+}
+
+.raga-card h3 {
+    margin-top: 0;
+    color: #800000;
+    border-bottom: 1px solid #DAA520;
+    padding-bottom: 5px;
+}
+
+/* Tala Card */
+.tala-card {
+    border: 2px solid #483D8B;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 248, 220, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.tala-card:hover {
+    transform: translateY(-3px);
+}
+
+.tala-card h3 {
+    margin-top: 0;
+    color: #483D8B;
+    border-bottom: 1px solid #DAA520;
+    padding-bottom: 5px;
+}
+
+/* Metric Card for Analysis */
+.metric-card {
+    background-color: rgba(255, 248, 220, 0.9);
+    border: 1px solid #DAA520;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #800000;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #4B3621;
+}
+
+/* Button Styling */
+.stButton > button {
+    background-color: #800000;
+    color: white;
+    border: 2px solid #DAA520;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #9a2a2a;
+    border-color: #ffc04d;
+    transform: translateY(-2px);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Sidebar Styling */
+.sidebar .sidebar-content {
+    background-color: rgba(255, 248, 220, 0.7);
+}
+
+.sidebar h2 {
+    color: #800000;
+    border-bottom: 2px solid #DAA520;
+    padding-bottom: 0.2em;
+}
+
+.sidebar hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #DAA520, transparent);
+}
+
+/* Input Field Styling */
+div.stTextInput > div > div > input {
+    border: 1px solid #DAA520;
+    border-radius: 4px;
+    background-color: rgba(255, 248, 220, 0.5);
+    color: #4B3621;
+}
+
+div.stTextInput > div > div > input:focus {
+    border: 2px solid #800000;
+    box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+}
+
+/* Selectbox Styling */
+div.stSelectbox > div > div > select {
+    border: 1px solid #DAA520;
+    border-radius: 4px;
+    background-color: rgba(255, 248, 220, 0.5);
+    color: #4B3621;
+}
+
+/* Slider Styling */
+div.stSlider > div > div {
+    color: #800000;
+}
+
+div.stSlider > div > div > div > div {
+    background-color: #800000;
+}
+
+div.stSlider > div > div > div > div > div {
+    background-color: #DAA520;
+}
+
+/* Expander Styling */
+div.streamlit-expanderHeader {
+    color: #483D8B;
+    font-weight: bold;
+    background-color: rgba(72, 61, 139, 0.1);
+    border: 1px solid #483D8B;
+    border-radius: 4px;
+}
+
+div.streamlit-expanderContent {
+    border: 1px solid #483D8B;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+}
+
+/* Tabs Styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 40px;
+    border-radius: 4px 4px 0 0;
+    padding: 0 20px;
+    background-color: rgba(255, 248, 220, 0.5);
+    border: 1px solid #DAA520;
+    border-bottom: none;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: rgba(128, 0, 0, 0.1);
+    border-top: 3px solid #800000;
+}
+
+.stTabs [data-baseweb="tab-panel"] {
+    padding: 15px;
+    border: 1px solid #DAA520;
+    border-radius: 0 4px 4px 4px;
+    background-color: rgba(255, 248, 220, 0.3);
+}
+
+/* Audio Player Styling */
+div.stAudio > div {
+    background-color: rgba(255, 248, 220, 0.7);
+    border: 1px solid #DAA520;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* File Uploader Styling */
+div.stFileUploader > div {
+    background-color: rgba(255, 248, 220, 0.7);
+    border: 1px solid #DAA520;
+    border-radius: 8px;
+}
+
+div.stFileUploader > div > button {
+    background-color: #800000;
+    color: white;
+}
+
+/* Progress Bar Styling */
+div.stProgress > div > div {
+    background-color: #800000;
+}
+
+/* Radio Button Styling */
+div.stRadio > div {
+    background-color: rgba(255, 248, 220, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+div.stRadio label {
+    color: #4B3621;
+}
+
+/* Checkbox Styling */
+div.stCheckbox > div > label {
+    color: #4B3621;
+}
+
+div.stCheckbox > div > div > div {
+    border-color: #800000;
+}
+
+div.stCheckbox > div > div > div[data-baseweb="checkbox"] > div {
+    background-color: #800000;
+}

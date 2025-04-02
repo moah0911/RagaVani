@@ -1,0 +1,7 @@
+2025-03-31 05:46:27 - Errors - ERROR - audio_analysis - cannot access local variable 'np' where it is not associated with a value - {"sample": "Raga Yaman Alaap by Pandit Jasraj"}
+2025-03-31 05:46:31 - Errors - ERROR - audio_analysis - cannot access local variable 'np' where it is not associated with a value - {"sample": "Raga Bhairav Bandish by Kishori Amonkar"}
+2025-03-31 05:47:19 - Errors - ERROR - audio_analysis - cannot access local variable 'os' where it is not associated with a value - {"file": "classical-instrumental-emotional-music-300927.mp3"}
+2025-03-31 06:05:26 - Errors - ERROR - audio_analysis - No librosa.feature attribute spectral_flux - {"analysis": "tala_detection"}
+2025-03-31 06:06:36 - Errors - ERROR - audio_analysis - No librosa.feature attribute spectral_flux - {"analysis": "tala_detection"}
+2025-03-31 06:07:06 - Errors - ERROR - audio_analysis - No librosa.feature attribute spectral_flux - {"analysis": "ai_performance"}
+2025-03-31 06:08:01 - Errors - ERROR - audio_analysis - No librosa.feature attribute spectral_flux - {"analysis": "tala_detection"}

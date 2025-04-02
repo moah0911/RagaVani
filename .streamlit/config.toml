@@ -1,0 +1,15 @@
+[server]
+headless = true
+
+[theme]
+primaryColor = "#800000"  # Deep Maroon
+secondaryBackgroundColor = "#F9F1E0"  # Lighter than #FFF8DC
+backgroundColor = "#FFF8DC"  # Soft Cream
+textColor = "#4B3621"  # Deep Brown
+font = "serif"
+
+[browser]
+gatherUsageStats = false
+
+[ui]
+hideSidebarNav = true

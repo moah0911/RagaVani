@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circular gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8DC" />
+      <stop offset="100%" stop-color="#FFF8DC" stop-opacity="0.6" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#800000" />
+      <stop offset="100%" stop-color="#483D8B" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main circular background -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" stroke="#DAA520" stroke-width="3" />
+  
+  <!-- Decorative elliptical patterns (like sound waves) -->
+  <ellipse cx="100" cy="100" rx="80" ry="40" fill="none" stroke="#800000" stroke-width="2" transform="rotate(0 100 100)" opacity="0.5" />
+  <ellipse cx="100" cy="100" rx="70" ry="50" fill="none" stroke="#483D8B" stroke-width="2" transform="rotate(30 100 100)" opacity="0.5" />
+  <ellipse cx="100" cy="100" rx="60" ry="40" fill="none" stroke="#008B8B" stroke-width="2" transform="rotate(60 100 100)" opacity="0.5" />
+  <ellipse cx="100" cy="100" rx="50" ry="70" fill="none" stroke="#FF8C00" stroke-width="2" transform="rotate(90 100 100)" opacity="0.5" />
+  
+  <!-- Indian classical music instrument silhouettes -->
+  <!-- Tanpura -->
+  <path d="M110 130 C110 100, 120 50, 130 40 L135 35 C140 30, 140 20, 135 15 L130 10 C125 5, 115 5, 110 10 L105 15 C100 20, 100 30, 105 35 L110 40 C120 50, 130 100, 130 130 Z" 
+        fill="#800000" stroke="#DAA520" stroke-width="1.5" opacity="0.8" />
+  
+  <!-- Tabla -->
+  <ellipse cx="65" cy="130" rx="20" ry="15" fill="#483D8B" stroke="#DAA520" stroke-width="1.5" opacity="0.8" />
+  <path d="M45 130 L85 130 L80 160 L50 160 Z" fill="#483D8B" stroke="#DAA520" stroke-width="1.5" opacity="0.8" />
+  
+  <!-- Sound wave circle -->
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#DAA520" stroke-width="2" stroke-dasharray="2,3" />
+  
+  <!-- Central note symbol -->
+  <path d="M100 80 L100 120 Q110 125, 120 120 T140 115 Q145 115, 145 120 T140 125 Q130 130, 120 125 T100 120" 
+        fill="#DAA520" stroke="#800000" stroke-width="1" filter="url(#shadow)" />
+  
+  <!-- Text: RagaVani -->
+  <text x="100" y="180" font-family="'Palatino Linotype', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="url(#textGradient)" filter="url(#shadow)">RagaVani</text>
+  
+  <!-- Small decoration elements -->
+  <circle cx="70" cy="65" r="4" fill="#FF8C00" />
+  <circle cx="130" cy="65" r="4" fill="#FF8C00" />
+  <path d="M65 65 L75 65" stroke="#DAA520" stroke-width="2" />
+  <path d="M125 65 L135 65" stroke="#DAA520" stroke-width="2" />
+  
+  <!-- Small Om symbol at top -->
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#800000" filter="url(#shadow)">ॐ</text>
+</svg>

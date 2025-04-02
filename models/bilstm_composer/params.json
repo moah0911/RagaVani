@@ -1,0 +1,30 @@
+{
+  "note_to_idx": {
+    "S": 0,
+    "r": 1,
+    "R": 2,
+    "g": 3,
+    "G": 4,
+    "M": 5,
+    "m": 6,
+    "P": 7,
+    "d": 8,
+    "D": 9,
+    "n": 10,
+    "N": 11,
+    "-": 12
+  },
+  "idx_to_note": ["S", "r", "R", "g", "G", "M", "m", "P", "d", "D", "n", "N", "-"],
+  "sequence_length": 64,
+  "temperature": 1.0,
+  "supported_ragas": [
+    "Yaman", 
+    "Bhairav", 
+    "Bhimpalasi", 
+    "Darbari", 
+    "Khamaj", 
+    "Malkauns",
+    "Bageshri",
+    "Todi"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "ragas": {
+    "Yaman": {
+      "aroha": ["N", "R", "G", "M", "D", "N", "S'"],
+      "avaroha": ["S'", "N", "D", "P", "M", "G", "R", "S"],
+      "vadi": "G",
+      "samvadi": "N",
+      "pakad": "N R G M D N R' S'",
+      "chalan": ["N R G M", "M D N R' S'", "S' N D P", "P M G R S"],
+      "time": "evening",
+      "mood": "romantic, peaceful",
+      "allowed_phrases": [
+        "N R G", "G M D", "D N S'", "S' N D", "D P M", "M G R", "R S"
+      ],
+      "forbidden_phrases": [
+        "G r", "r G", "M m", "m M", "N n", "n N", "D d", "d D"
+      ],
+      "characteristic_phrases": [
+        "N R G M", "M D N S'", "S' N D P", "P M G R S"
+      ]
+    },
+    "Bhairav": {
+      "aroha": ["S", "r", "G", "M", "P", "d", "N", "S'"],
+      "avaroha": ["S'", "N", "d", "P", "M", "G", "r", "S"],
+      "vadi": "d",
+      "samvadi": "r",
+      "pakad": "S r S d N S",
+      "chalan": ["S r G", "M P d", "d N S'", "S' N d", "P M G", "r S"],
+      "time": "morning",
+      "mood": "serious, profound",
+      "allowed_phrases": [
+        "S r", "r G", "G M", "M P", "P d", "d N", "N S'"
+      ],
+      "forbidden_phrases": [
+        "S R", "G g", "P D", "N n"
+      ],
+      "characteristic_phrases": [
+        "S r S", "r G M P", "P d N S'", "S' N d P", "M G r S"
+      ]
+    },
+    "Bhimpalasi": {
+      "aroha": ["S", "g", "M", "P", "n", "S'"],
+      "avaroha": ["S'", "n", "D", "P", "M", "g", "R", "S"],
+      "vadi": "M",
+      "samvadi": "S",
+      "pakad": "P g M R S",
+      "chalan": ["S g M P", "P n S'", "S' n D P", "P M g R S"],
+      "time": "afternoon",
+      "mood": "melancholic, yearning",
+      "allowed_phrases": [
+        "S g", "g M", "M P", "P n", "n S'", "S' n", "n D", "D P", "P M", "M g", "g R", "R S"
+      ],
+      "forbidden_phrases": [
+        "S G", "P N", "R r", "D d"
+      ],
+      "characteristic_phrases": [
+        "S g M P", "P n S'", "S' n D P", "P M g R S"
+      ]
+    },
+    "Darbari": {
+      "aroha": ["S", "R", "g", "M", "P", "d", "n", "S'"],
+      "avaroha": ["S'", "n", "d", "P", "M", "g", "R", "S"],
+      "vadi": "R",
+      "samvadi": "P",
+      "pakad": "g M d n S R S",
+      "chalan": ["S R g", "M P d", "n S'", "S' n d", "P M g", "R S"],
+      "time": "late night",
+      "mood": "serious, profound, meditative",
+      "allowed_phrases": [
+        "S R", "R g", "g M", "M P", "P d", "d n", "n S'"
+      ],
+      "forbidden_phrases": [
+        "S r", "g G", "P D", "n N"
+      ],
+      "characteristic_phrases": [
+        "g M d n", "S' n d P", "M g R S"
+      ]
+    },
+    "Khamaj": {
+      "aroha": ["S", "G", "M", "P", "D", "N", "S'"],
+      "avaroha": ["S'", "N", "D", "P", "M", "G", "R", "S"],
+      "vadi": "G",
+      "samvadi": "N",
+      "pakad": "G M P D N S' D P",
+      "chalan": ["S G M P", "P D N S'", "S' N D P", "P M G R S"],
+      "time": "late evening",
+      "mood": "romantic, playful",
+      "allowed_phrases": [
+        "S G", "G M", "M P", "P D", "D N", "N S'"
+      ],
+      "forbidden_phrases": [
+        "S g", "P d", "N n"
+      ],
+      "characteristic_phrases": [
+        "G M P D", "D N S'", "S' N D P", "P M G R S"
+      ]
+    },
+    "Malkauns": {
+      "aroha": ["S", "g", "M", "d", "n", "S'"],
+      "avaroha": ["S'", "n", "d", "M", "g", "S"],
+      "vadi": "M",
+      "samvadi": "S",
+      "pakad": "g M d n d M g S",
+      "chalan": ["S g M", "M d n", "S' n d", "M g S"],
+      "time": "midnight",
+      "mood": "serious, profound, mystical",
+      "allowed_phrases": [
+        "S g", "g M", "M d", "d n", "n S'"
+      ],
+      "forbidden_phrases": [
+        "S G", "M P", "d D", "n N"
+      ],
+      "characteristic_phrases": [
+        "g M d n", "S' n d M", "g M g S"
+      ]
+    },
+    "Bageshri": {
+      "aroha": ["S", "g", "M", "P", "D", "n", "S'"],
+      "avaroha": ["S'", "n", "D", "P", "M", "g", "R", "S"],
+      "vadi": "M",
+      "samvadi": "S",
+      "pakad": "S g M P D n D P",
+      "chalan": ["S g M P", "P D n S'", "S' n D P", "P M g R S"],
+      "time": "late night",
+      "mood": "romantic, yearning",
+      "allowed_phrases": [
+        "S g", "g M", "M P", "P D", "D n", "n S'"
+      ],
+      "forbidden_phrases": [
+        "S G", "P d", "n N"
+      ],
+      "characteristic_phrases": [
+        "g M P D", "D n S'", "S' n D P", "P M g R S"
+      ]
+    },
+    "Todi": {
+      "aroha": ["S", "r", "g", "M", "P", "d", "N", "S'"],
+      "avaroha": ["S'", "N", "d", "P", "M", "g", "r", "S"],
+      "vadi": "d",
+      "samvadi": "r",
+      "pakad": "r g r S",
+      "chalan": ["S r g", "M P d", "N S'", "S' N d", "P M g", "r S"],
+      "time": "late morning",
+      "mood": "serious, profound, meditative",
+      "allowed_phrases": [
+        "S r", "r g", "g M", "M P", "P d", "d N", "N S'"
+      ],
+      "forbidden_phrases": [
+        "S R", "g G", "M m", "P D", "d D", "N n"
+      ],
+      "characteristic_phrases": [
+        "r g M P", "P d N S'", "S' N d P", "M g r S"
+      ]
+    },
+    "Bilawal": {
+      "aroha": ["S", "R", "G", "M", "P", "D", "N", "S'"],
+      "avaroha": ["S'", "N", "D", "P", "M", "G", "R", "S"],
+      "vadi": "D",
+      "samvadi": "G",
+      "pakad": "S R G P D S'",
+      "chalan": ["S R G M", "P D N S'", "S' N D P", "M G R S"],
+      "time": "morning",
+      "mood": "bright, joyful",
+      "allowed_phrases": [
+        "S R", "R G", "G M", "M P", "P D", "D N", "N S'"
+      ],
+      "forbidden_phrases": [
+        "S r", "R g", "G g", "P d", "D d", "N n"
+      ],
+      "characteristic_phrases": [
+        "S R G M", "P D N S'", "S' N D P", "M G R S"
+      ]
+    },
+    "Marwa": {
+      "aroha": ["N", "r", "G", "M", "D", "N", "S'"],
+      "avaroha": ["S'", "N", "D", "M", "G", "r", "S"],
+      "vadi": "r",
+      "samvadi": "D",
+      "pakad": "r G M D N r S",
+      "chalan": ["N r G", "M D N", "S' N D", "M G r", "S"],
+      "time": "sunset",
+      "mood": "serious, profound",
+      "allowed_phrases": [
+        "N r", "r G", "G M", "M D", "D N", "N S'"
+      ],
+      "forbidden_phrases": [
+        "r R", "G g", "M m", "D d", "N n", "P"
+      ],
+      "characteristic_phrases": [
+        "r G M D", "D N S'", "S' N D M", "G r S"
+      ]
+    }
+  }
+}
