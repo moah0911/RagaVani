@@ -18,7 +18,7 @@ seaborn
 # Neural processing (optimized for deployment)
 tensorflow-cpu
 tensorflow # Using CPU version for better compatibility
-keras==2.12.0
+keras
 
 # Audio synthesis
 sounddevice==0.4.6
