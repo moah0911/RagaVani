@@ -16,7 +16,7 @@ plotly
 seaborn
 
 # Neural processing (optimized for deployment)
-tensorflow-cpu
+
 tensorflow # Using CPU version for better compatibility
 keras
 
